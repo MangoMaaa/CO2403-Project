@@ -1,1 +1,96 @@
-#css
+/* CSS Stylesheet for the Agile Project */
+
+
+
+h1 {
+    font-family: sans-serif;
+    color: white;
+    font-size: 3vw;
+}
+
+h2 {
+    font-family: sans-serif;
+    color: #34516C;
+    font-size: 3vw;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 1.5vw;
+}
+
+a {
+    color: #007FB0;
+    font-family: sans-serif;
+    font-size: 2vw;
+    text-decoration: none;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+    text-align: right;
+}
+
+li {
+    display:inline-block;
+    margin-right: 0%;
+    font-family: sans-serif;
+}
+
+
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #BE1622; 
+}
+
+.column {
+    flex-grow: 1;
+    width: 1%;
+    height: auto;
+
+    margin: 0%;
+    padding: 0%;
+
+    align-self: center;
+
+}
+
+.body {
+    display: flex;
+    text-align: center;
+
+    margin: 5%;
+    padding: auto;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer {
+    background-color: #34516C;
+    color: white;
+    font-family: sans-serif;
+
+    padding: 0%;
+    margin: 0%;
+
+    position: sticky;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content:baseline;
+    align-items: baseline;
+}
+
