@@ -53,12 +53,20 @@ li {
     display: flex;
     flex-wrap: wrap;
     background-color: #BE1622; 
+    position: sticky;
+
+    /* flex-grow: 1; */
+    flex-direction: column;
+    width: auto;
+    height: 1%;
+
+    margin: 0%;
 }
 
 .column {
     flex-grow: 1;
     width: auto;
-    height: auto;
+    height: 10%;
 
     margin: 0%;
     padding: 0%;
@@ -68,29 +76,25 @@ li {
 }
 .column_box {
 
-    background-color: orange;
-    border: greenyellow;
-    border-style: solid;
     display: flex;
 
     width: auto;
     height: auto;
 
-    margin: 0%;
-    margin-left: 6%;
-    padding: 3%;
-
+    margin-left: 0%;
+    padding: 1%;
+    
     flex-direction: row;
 }
 .column_footer {
-    flex-grow: 1;
-    width: auto;
+    
+    width: %;
     height: auto;
 
-    margin: 1%;
-    padding: 0%;
+    margin: 0%;
+    padding: 1%;
 
-    align-self: left;
+    
 
 }
 
@@ -113,28 +117,40 @@ li {
     color: white;
     font-family: sans-serif;
 
+    display: flex;
+    flex-wrap: wrap;
+
     padding: auto;
     margin: 0%;
 
     position: sticky;
-
-    display: flex;
-    flex-wrap: wrap;
-    /*flex-direction: column;*/
-
 }
 
 .menu {
 
     display: flex;
 
-    padding: 5%;
-    margin: 1%;
+    padding-left:15% ;
+    padding-top:10%;
+    margin: 0%;
 
-    justify-content:baseline;
-    align-items: baseline;
 }
 
 .contact_box {
     align-self: left;
+}
+
+
+
+/* IDs */
+
+#filler_box {
+    display: flex;
+    
+    padding-right: 29%;
+    margin: 5%;
+}
+
+#location_box {
+    text-align: right;
 }
