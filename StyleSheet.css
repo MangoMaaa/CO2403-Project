@@ -45,6 +45,10 @@ li {
 
 
 
+/*classes*/
+
+
+
 .header {
     display: flex;
     flex-wrap: wrap;
@@ -53,13 +57,40 @@ li {
 
 .column {
     flex-grow: 1;
-    width: 1%;
+    width: auto;
     height: auto;
 
     margin: 0%;
     padding: 0%;
 
-    align-self: center;
+    /*align-self: center;*/
+
+}
+.column_box {
+
+    background-color: orange;
+    border: greenyellow;
+    border-style: solid;
+    display: flex;
+
+    width: auto;
+    height: auto;
+
+    margin: 0%;
+    margin-left: 6%;
+    padding: 3%;
+
+    flex-direction: row;
+}
+.column_footer {
+    flex-grow: 1;
+    width: auto;
+    height: auto;
+
+    margin: 1%;
+    padding: 0%;
+
+    align-self: left;
 
 }
 
@@ -82,15 +113,28 @@ li {
     color: white;
     font-family: sans-serif;
 
-    padding: 0%;
+    padding: auto;
     margin: 0%;
 
     position: sticky;
 
     display: flex;
     flex-wrap: wrap;
+    /*flex-direction: column;*/
+
+}
+
+.menu {
+
+    display: flex;
+
+    padding: 5%;
+    margin: 1%;
 
     justify-content:baseline;
     align-items: baseline;
 }
 
+.contact_box {
+    align-self: left;
+}
