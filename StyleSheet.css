@@ -14,19 +14,28 @@ h2 {
     font-size: 3vw;
 }
 
+h3 {
+    color: #fa4500;
+}
+
 p {
     font-family: sans-serif;
     font-size: 1.5vw;
 }
 
 a {
-    color: #007FB0;
+    color: white;
     font-family: sans-serif;
     font-size: 2vw;
     text-decoration: none;
 }
 
+div {
+    color: #09e64b;
+}
+
 body {
+    background-color: #1d232e;
     margin: 0%;
     padding: 0%;
     position: relative;
@@ -52,7 +61,7 @@ li {
 .header {
     display: flex;
     flex-wrap: wrap;
-    background-color: #BE1622; 
+    background-color: #077572; 
     position: sticky;
 
     /* flex-grow: 1; */
@@ -153,4 +162,15 @@ li {
 
 #location_box {
     text-align: right;
+}
+
+#menu {
+    display: flex;
+
+    padding-right: 1%;
+    margin: 1%;
+
+    border-style: solid;
+    border-color: black;
+    background-color: #fa4500;
 }
