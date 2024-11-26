@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Themed Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background */
+            color: white; /* Default text color */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #1a1a1a; /* Dark grey for contrast */
+        }
+        header img#logo-icon { /* Logo size */
+            width: 150px;
+            height: 150px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            flex-grow: 1;
+            text-align: center;
+            color: #fa4500; /* Dark orange-red for an accent */
+            cursor: pointer;
+        }
+        header a img { /* About Us image size and fit */
+            width: 150px;
+            height: 150px;
+            object-fit: cover; /* Ensures the image fits the area properly */
+            border-radius: 10px; /* Optional: Adds slight rounding for a cleaner look */
+        }
+        main {
+            flex: 1; /* Allow main content to fill available vertical space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        main h1 {
+            color: #49b675; /* Vegetative green for headings */
+            margin: 10px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        main h1 img {
+            width: 40px; /* Adjust the image size */
+            height: 40px;
+            margin-right: 10px; /* Space between image and text */
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1a1a1a; /* Match header color */
+            position: relative;
+        }
+        footer h4 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+            color: #fa4500; /* Highlight for the footer title */
+        }
+        footer address {
+            font-style: normal;
+            font-size: 14px;
+            color: #49b675; /* Vegetative green for footer text */
+        }
+        footer button {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #fa4500; /* Dark orange-red for button */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer button:hover {
+            background-color: #c33c00; /* Slightly darker orange-red for hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo Icon (Non-clickable) -->
+        <img src="https://www.uclan.ac.uk/static/img/logo.svg" alt="Logo" id="logo-icon">
+        <h1>Home</h1>
+        <!-- About Us Image (Clickable) -->
+        <a href="about-us.html" title="Learn About Us">
+            <img src="https://media.istockphoto.com/id/1402604850/photo/the-word-about-us-on-wooden-cubes-business-communication-and-information.jpg?s=612x612&w=0&k=20&c=Oc2HZUPVJRXFsjTwKVgWY_ddWrKeQUG0KCyKUGef-ig=" 
+                alt="About Us Image">
+        </a>
+    </header>
+    <main>
+        <!-- Heading 1 with Image (Clickable) -->
+        <a href="trojan-horse-attack.html">
+            <h1><img src="https://www.getsupport.co.uk/wp-content/uploads/2020/12/trojan-horse.jpg" alt="Trojan Horse Icon">Learn about Trojan Horse Threat/Attack</h1>
+        </a>
+        <!-- Heading 2 with Image (Clickable) -->
+        <a href="insider-attack-threat.html">
+            <h1><img src="https://linfordco.com/wp-content/uploads/2019/07/insider-threats-in-cyber-security.jpg" alt="Insider Attack Icon">Learn about Insider Attack/Threat</h1>
+        </a>
+    </main>
+    <footer>
+        <!-- Address Section on the bottom left (Non-clickable) -->
+        <div>
+            <h4>Location/Contact</h4>
+            <address>
+                University of Central Lancashire Student Union,<br>
+                Flyde Road Preston PR1 7BY<br>
+                Email: onlinestudy@uclan.ac.uk<br>
+                Phone: +44 (0)1772 201201
+            </address>
+        </div>
+        <!-- Continue Button (Clickable) -->
+        <a href="continue.html">
+            <button>Continue</button>
+        </a>
+    </footer>
+</body>
+</html>
