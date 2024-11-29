@@ -61,7 +61,7 @@ li {
 .header {
     display: flex;
     flex-wrap: wrap;
-    background-color: #077572; 
+    background-color: black; 
     position: sticky;
 
     /* flex-grow: 1; */
@@ -122,7 +122,7 @@ li {
 }
 
 .footer {
-    background-color: #34516C;
+    background-color: black;
     color: white;
     font-family: sans-serif;
 
