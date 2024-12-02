@@ -6,6 +6,8 @@ h1 {
     font-family: sans-serif;
     color: white;
     font-size: 3vw;
+
+    align-self: center;
 }
 
 h2 {
@@ -80,9 +82,9 @@ li {
     margin: 0%;
     padding: 0%;
 
-    /*align-self: center;*/
-
+    /*align-content: center;*/
 }
+
 .column_box {
 
     display: flex;
