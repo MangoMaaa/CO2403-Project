@@ -175,4 +175,23 @@ li {
     border-style: solid;
     border-color: black;
     background-color: #fa4500;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#menu:hover {
+    background-color: #c33c00;
+}
+
+#quiz_box {
+    display: flex;
+
+    width: 50%;
+    height: 60%;
+    padding: 5%;
+    margin: 5%;
+
+    border-style: solid;
+    border-color: white;
+
 }
