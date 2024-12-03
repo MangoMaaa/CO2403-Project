@@ -55,7 +55,6 @@ li {
 }
 
 
-
 /*classes*/
 
 
@@ -172,6 +171,9 @@ li {
     padding-right: 1%;
     margin: 1%;
 
+    width: 60%;
+    
+    
     border-style: solid;
     border-color: black;
     background-color: #fa4500;
