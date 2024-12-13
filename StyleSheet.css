@@ -3,7 +3,7 @@
 
 
 h1 {
-    font-family: sans-serif;
+    font-family: Consolas;
     color: white;
     font-size: 3vw;
 
@@ -11,7 +11,7 @@ h1 {
 }
 
 h2 {
-    font-family: sans-serif;
+    font-family: Consolas;
     color: #34516C;
     font-size: 3vw;
 }
@@ -21,13 +21,13 @@ h3 {
 }
 
 p {
-    font-family: sans-serif;
+    font-family: Consolas;
     font-size: 1.5vw;
 }
 
 a {
     color: white;
-    font-family: sans-serif;
+    font-family: Consolas;
     font-size: 2vw;
     text-decoration: none;
 }
@@ -41,6 +41,7 @@ body {
     margin: 0%;
     padding: 0%;
     position: relative;
+    font-family: Consolas;
 }
 
 ul {
@@ -51,7 +52,7 @@ ul {
 li {
     display:inline-block;
     margin-right: 0%;
-    font-family: sans-serif;
+    font-family: Consolas;
 }
 
 
@@ -125,7 +126,7 @@ li {
 .footer {
     background-color: black;
     color: white;
-    font-family: sans-serif;
+    font-family: Consolas;
 
     display: flex;
     flex-wrap: wrap;
