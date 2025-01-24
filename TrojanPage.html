@@ -1,71 +1,168 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>UClan Cybersecurity</title>
-    <link rel="stylesheet" href="StyleSheet.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Arcade</title>
+  <link rel="stylesheet" href="experimenthomestyles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <div class="header">
+<header>
+  <br>
+  <br>
+  <h1>Cyber Arcade</h1>
+</header>
 
-        <!-- logo html here-->
-        <h1 class="column">Trojan Threats</h1>
+<nav class="arcade-nav">
+    <ul>
+      <li><a href="HomePage.html">Home</a></li>
+      <li><a href="TrojanPage.html">Trojan Threats</a></li>
+      <li><a href="InsiderPage.html">Insider Threats </a></li>
+      <li><a href="AboutPage.html">About Us</a></li>
+      <li><a href="SettingsPage.html">Settings</a></li>
+  
+    </ul>
+  </nav>
+  <br>
 
-        <ul class="menu">
+<br>
+<h2>What is a Trojan?</h2>
+<br>
 
-            <!-- change button names and links-->
+<video id="hologram-video" autoplay loop muted playsinline>
+  <source src="cropped horse hologram.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  <div class="hologram-text">This is your hologram information!</div>
+</video>
 
-            <li id="menu"><a href="HomePage.html">Home</a></li>
-            <li id="menu"><a href="TrojanPage.html">Trojan Threats</a></li>
-            <li id="menu"><a href="InsiderPage.html">Insider Threats</a></li>
-            <li id="menu"><a href="AboutPage.html">About Us</a></li>
-            <li id="menu"><a href="SettingsPage.html">Settings</a></li>
-        </ul>
+<p> A Trojan Horse is a type of 
+  <span class="tooltip"><strong>malware</strong>
+    <span class="tooltiptext">Malware is software designed to restrict, destroy, or force unauthorized access to a computer.</span>
+  </span> 
+  that is disguised as a legitimate 
+  <span class="tooltip"><strong>program</strong>
+    <span class="tooltiptext">A set of ordered operations for a computer to perform.</span>
+  </span> 
+  so that it appears users installed malware on their devices of their own accord. Unlike 
+  <span class="tooltip"><strong>worms</strong>
+    <span class="tooltiptext">Standalone malware that can replicate independently to facilitate the spread to other computers across a network.</span>
+  </span> 
+  and 
+  <span class="tooltip"><strong>viruses</strong>
+    <span class="tooltiptext">Software program that interferes with the operating system of a computer and needs to be activated by a host.</span>
+  </span>, 
+  Trojans do not self-replicate. Typically called a "trojan virus," which isn't accurate, as a virus is a program that attaches itself to other software, while a Trojan is a program that conceals its true malware content to fool users.
+  Usually distributed through 
+  <span class="tooltip"><strong>social engineering</strong>
+    <span class="tooltiptext">A manipulation technique that involves tricking people into sharing sensitive information.</span>
+  </span>, e.g., 
+  <span class="tooltip"><strong>phishing</strong>
+    <span class="tooltiptext">A method of acquiring confidential information by taking some sort of action e.g clicking a link.</span>
+  </span>.
+</p>
 
+<div class="slide-container">
+  <div class="slide-box active">
+    <div class="slide-text">
+      <h3>What is a Dropper Trojan?</h3>
+      <p> A type of Trojan that can't execute code itself so brings other malware with it. Droppers already contain the other malicious components in the program package so they can be remotely updated in secret like Downloader Trojans so virus scanners will not be able to detect them with new definitions.</p>
     </div>
+  </div>
 
-    <!-- add introductory paragraph here-->
-    <div class="body">
-        <div>Trojan threat stuff</div>
-
-        <div id="quiz_box"> 
-            <form>
-                <label for="quiz">quiz</label>
-                <label for="Q1"><br> placeholder for Q1<br></label>
-                <input type="radio" id="1" name="placeholder" value="placeholder">
-                <label for="Q1">placeholder</label>
-                <input type="radio" id="2" name="placeholder" value="placeholder2">
-                <label for="2">placeholder</label>
-                <input type="radio" id="3" name="placeholder" value="placeholder3">
-                <label for="3">placeholder</label>
-            </form>
-        </div>
+  <div class="slide-box">
+    <div class="slide-text">
+      <h3>What is a Downloader Trojan?</h3>
+      <p> Targets an already infected device. Downloaders need network resources to pull malware from the network, whereas droppers don't. It downloads and deploys more malicious code such as ransomware or keyloggers. Often the first stage of a multi-trojan attack, followed by installation.</p>
     </div>
+  </div>
 
-
-    <!-- change contact information-->
-    <div class="footer">
-        <div class="column_box">
-            <div class="column_footer" class="contact_box">
-                <h3>Contact</h3>
-                <p>Email: suinformation@uclan.ac.uk</p>
-                <p>Phone: 01772 89 3000</p>
-            </div>
-        </div>
-        <div id="filler_box"></div>
-        <div class="column_box"">
-            <div class="column_footer">
-                <div id="location_box">
-                    <h3>Location</h3>
-                    <p>University of Central Lancashire C&T Building</p>
-                    <p>Preston, PR1 2HE, United Kingdom</p>
-                    <p>Registered in England</p>
-                    <p>Company Number: 7623917</p>
-                    <p>Registered Charity Number: 1142616</p>
-                </div>
-            </div>
-        </div>
+  <div class="slide-box">
+    <div class="slide-text">
+      <h3>What is a Rootkit Trojan?</h3>
+      <p>A Trojan that conceals itself on a user's computer to prevent detection by other malicious programs. It allows attackers to acquire root-level access to a machine and boots together with the operating system, making it difficult to detect and remove.</p>
     </div>
+  </div>
+
+
+  <div class="slide-box">
+    <div class="slide-text">
+      <h3>What is a DDoS Trojan (Botnet)</h3>
+      <p>A Trojan that turns devices into zombies for a larger botnet.
+        The attackers objective is to harvest as many machines as possible and use them to flood servers with fake traffic. Most owners of infected computers are not aware that their devices are part of a wider network of other infected computers controlled by a amlicious user.
+        </p>
+    </div>
+  </div>
+</div>
+
+<div class="button-container">
+  <!-- Only one "Next" button to control all slides -->
+  <button onclick="nextSlide()">Next</button>
+</div>
+
+<br>
+<br>
+
+<h2> How does a Trojan Attack work?? </h2>
+<div class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/C0kLqvNuRrU?si=Fw3g7gD2LoIf1DmT" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+
+<h2> Case Study: 3 Trojan Examples </h2>
+<p>  bladi bladi bla </p>
+
+<div class="baitalert">
+<button onclick="showAlert()">FREE GIFT!</button>
+</div>
+
+<script>
+  function showAlert() {
+    alert("Hi there! As a gift from our team at UCLan heres a free starter guide to a beginners journey in cyber security. Click the link below to download the PDF. HAPPY HACKING ;) www.thiswasbait.com");
+  }
+</script>
+
+<h2> How to protect yourself from a Trojan threat. </h2>
+
+<script>
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide-box');
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;  // Loop back to the first slide after the last one
+
+  const activeSlide = document.querySelector('.slide-box.active');
+  const nextSlide = slides[currentIndex];
+
+  // Remove active class from the current slide and add it to the next one
+  activeSlide.classList.remove('active');
+  nextSlide.classList.add('active');
+}
+
+// Initialize the first slide as active
+slides[currentIndex].classList.add('active');
+</script>
+
+
+<footer class="arcade-footer">
+  <p>&copy; UCLan Cyber Arcade.</p>
+  <br>
+  <p> References</p>
+  <ul>
+    <li><a href="link" target="_blank">Reference 1</a></li>
+    <li><a href="link" target="_blank">Reference 2</a></li>
+    <li><a href="link" target="_blank">Reference 3</a></li>
+  </ul>
+</footer>
+
 </body>
 </html>
