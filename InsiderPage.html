@@ -1,67 +1,112 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>UClan Cybersecurity</title>
-    <link rel="stylesheet" href="StyleSheet.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Arcade</title>
+  <link rel="stylesheet" href="experimenthomestyles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
-    <div class="header">
-
-        <!-- logo html here-->
-        <h1 class="column">Insider Threats</h1>
-
-        <ul class="menu">
-            <li id="menu"><a href="HomePage.html">Home</a></li>
-            <li id="menu"><a href="TrojanPage.html">Trojan Threats</a></li>
-            <li id="menu"><a href="InsiderPage.html">Insider Threats</a></li>
-            <li id="menu"><a href="AboutPage.html">About Us</a></li>
-            <li id="menu"><a href="SettingsPage.html">Settings</a></li>
-        </ul>
-
-    </div>
-
-    <!-- add introductory paragraph here-->
-    <div class="body">
-        <div>Insider Threats stuff.</div>
-        <div id="quiz_box"> 
-            <form>
-                <label for="quiz">quiz</label>
-                <label for="Q1"><br> placeholder for Q1<br></label>
-                <input type="radio" id="1" name="placeholder" value="placeholder">
-                <label for="Q1">placeholder</label>
-                <input type="radio" id="2" name="placeholder" value="placeholder2">
-                <label for="2">placeholder</label>
-                <input type="radio" id="3" name="placeholder" value="placeholder3">
-                <label for="3">placeholder</label>
-            </form>
-        </div>
-    </div>
+<header>
+  <br>
+  <br>
+  <h1>Cyber Arcade</h1>
+</header>
 
 
-    <!-- change contact information-->
-    <div class="footer">
-        <div class="column_box">
-            <div class="column_footer" class="contact_box">
-                <h3>Contact</h3>
-                <p>Email: suinformation@uclan.ac.uk</p>
-                <p>Phone: 01772 89 3000</p>
-            </div>
-        </div>
-        <div id="filler_box"></div>
-        <div class="column_box"">
-            <div class="column_footer">
-                <div id="location_box">
-                    <h3>Location</h3>
-                    <p>University of Central Lancashire C&T Building</p>
-                    <p>Preston, PR1 2HE, United Kingdom</p>
-                    <p>Registered in England</p>
-                    <p>Company Number: 7623917</p>
-                    <p>Registered Charity Number: 1142616</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<nav class="arcade-nav">
+    <ul>
+      <li><a href="HomePage.html">Home</a></li>
+      <li><a href="TrojanPage.html">Trojan Threats</a></li>
+      <li><a href="InsiderPage.html">Insider Threats </a></li>
+      <li><a href="AboutPage.html">About Us</a></li>
+      <li><a href="SettingsPage.html">Settings</a></li>
+  
+    </ul>
+  </nav>
+  <br>
+
+<h2> What is an Insider Threat? </h2>
+<p>A bachelors degree in Cyber Security refers to the study of defending computers, people and information from malicious actors who target systems for a variety of reasons. </p>
+<br>
+
+
+
+<div class="arcade-border">
+  <div class="arcade-top"> bla bla</div>
+  <div class="arcade-content">
+    <section id="games">
+      <h2>Cybersecurity Games</h2>
+      <button onclick="startGame()"> Insert Coin</button>
+    </section>
+    <section id="resources">  
+
+      <!-- <h2>Learning Resources</h2>
+      <ul>
+        <li><a href="#">Beginner's Guide</a></li>
+        <li><a href="#">Online Safety Tips</a></li>
+      </ul> -->
+
+      <div class="arcade-screen">
+        <p class="loading">Insert Coin...</p>
+        
+        <audio id="coin-sound" preload="auto">
+          <source src="insertcoin.mp3" type="audio/mpeg">
+          <source src="insertcoin.ogg" type="audio/ogg">
+          Your browser does not support the audio element.
+        </audio>
+        
+      </div>
+      
+    </section>
+  </div>
+  <div class="arcade-bottom"></div>
+</div>
+
+<footer class="arcade-footer">
+  <p>&copy; bla bla bla.</p>
+</footer>
+  
+  <script>
+
+    function startGame() {
+  const coinSound = document.getElementById('coin-sound');
+  coinSound.volume = 1.0; // Maximum volume
+  if (coinSound) {
+    coinSound.play().catch((error) => {
+      console.error("Error playing audio:", error);
+    });
+  } else {
+    console.error("Coin sound element not found!");
+  }
+  const screen = document.querySelector('.arcade-screen');
+  screen.innerHTML = '<p>Loading...</p>';
+  setTimeout(() => {
+    screen.innerHTML = `
+      <p>Welcome to Cybersecurity Arcade!</p>
+      <p>Use the arrow keys to defend your network!</p>
+    `;
+  }, 2000);
+}
+
+
+</script>
+
+<footer class="arcade-footer">
+  <p>&copy; UCLan Cyber Arcade.</p>
+  <br>
+  <p> References</p>
+  <ul>
+    <li><a href="https.link" target="_blank">Reference 1</a></li>
+    <li><a href="https.link" target="_blank">Reference 2</a></li>
+    <li><a href="https.link" target="_blank">Reference 3</a></li>
+  </ul>
+
+</footer>
+
 </body>
 </html>
