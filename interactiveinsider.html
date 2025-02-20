@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="interactiveinsiderstyles.css">
+    <title> Kiera's Computer</title>
+</head>
+
+<body>
+    <script>
+        setTimeout(function() {
+            alert("Looks like your coworker Kiera has left her computer on during her lunch break. This is your perfect chance to do some snooping! Pretend you are an insider and try and see what valuable information you can find.");
+        }, 500);
+
+        // Function to open the window
+        function openWindow(windowId) {
+            document.getElementById(windowId).style.display = "block"; // Show the window
+        }
+
+        // Function to close the window
+        function closeWindow(windowId) {
+            document.getElementById(windowId).style.display = "none"; // Hide the window
+        }
+    </script>
+
+    <br>
+    <!-- Button to open draft2.txt window -->
+    <button class="draft2-txt" onclick="openWindow('draft2Window')">
+        <img src="txt-file.png" alt="icon">
+        <div>draft2.txt</div>
+    </button>
+
+    <!-- The window for draft2.txt -->
+    <div class="window" id="draft2Window" style="display: none;">
+        <div class="window-header">
+            My Computer Window
+            <button class="close-btn" onclick="closeWindow('draft2Window')">X</button>
+        </div>
+        <div class="window-content">
+            <p> MEDICAL REPORT
+                FOR DOT-2012
+                NOTICE TO APPLICANT <br>
+                Please take this form to a licensed medical doctor or any other competent authority acceptable to the Examiner of Drivers. You are responsible for any expense involved.
+                The Medical Advisory Board will review your medical report that will be identified by number only. The board will provide an opinion regarding your fitness to drive safely based on the guidance in the Medical Conditions Affecting Drivers.
+                The County's Examiner of Drivers will review the board's opinion and decide whether you meet the standards required to operate a motor vehicle in the State of Hawaii.<br>
+                NOTICE TO MEDICAL EXAMINER:
+                This applicant is required to undergo a medical examination to provide the driver licensing administrator information to decide whether the physical and mental standards to be licensed in this State are met. Your report will be reviewed by this agency and the Medical Advisory Board before the applicant is licensed. State laws make the licensing administrator responsible for the licensing action and your medical report is strictly advisory. Please be assured that your report will be used to grant driving privileges commensurate with driving ability while considering driving need and public safety.
+                Please complete the form for the medical condition in question so that we may be properly informed about the medical conditions that might impair safe driving ability. If your examination reveals other conditions that in your professional opinion might present a hazard to driving safely, please provide the information. Consult with other medical authorities, if necessary.
+                The applicant is responsible for any professional fee for this examination. The AUTHORIZATION FOR RELEASE OF MEDICAL INFORMATION form is for your protection; it should be signed by the applicant and kept in your
+                files.
+                Thank you for your assistance in this program.
+                <br>
+                AUTHORIZATION FOR RELEASE OF MEDICAL INFORMATION
+                <br>
+                Yours Sincerely, <br>
+                Kiera Newton
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Button to open Google window -->
+    <button class="draft2-txt" onclick="openWindow('googleWindow')">
+        <img src="chrome.png" alt="icon"> 
+        <div>Google</div>
+    </button>
+
+    <!-- The window for Google -->
+    <div class="window" id="googleWindow" style="display: none;">
+        <div class="window-header">
+            Google
+            <button class="close-btn" onclick="closeWindow('googleWindow')">X</button>
+        </div>
+        <div class="window-content">
+            <p>This window represents Google. Add content or make a search here!</p>
+        </div>
+    </div>
+
+    <h3> Untitled</h3>
+
+    <h4> applicantInfo.docx</h4>
+
+    <div class="sticky">
+        <b>passwords:<br></b>password<br> qwerty123<br>cutefluffydog
+    </div>
+
+    <p>....................</p>
+
+</body>
+</html>
