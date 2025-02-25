@@ -441,9 +441,9 @@ body {
   }
 
 /*I think this is where you left of chris*/
-  .settings_box{
+  /* .settings_box{
     
-  }
+  } */
 
   .profilestory-swipe {
     display: flex;
@@ -452,38 +452,24 @@ body {
     gap: 10px;
     scroll-snap-type: x mandatory;
     justify-content: center;
-    
 }
 
 .card {
-  width: 120px; /* Smaller size */
-  height: 160px; /* Smaller height */
-  flex: 0 0 auto;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  text-align: center;
-  scroll-snap-align: start;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  overflow: hidden; /* Prevent overflow */
-}
-
-.card.maximized {
-  width: 320px; /* Maximized size */
-  height: 450px; /* Maximized height */
-  z-index: 1; /* To bring it to the front */
-  overflow: hidden; /* Prevent overflow in maximized state */
-}
-
-.card p {
-  max-height: 300px; /* Set a max height for the text */
-  overflow-y: auto; /* Allow vertical scrolling if text exceeds max height */
-  margin: 0; /* Reset margin */
-  padding: 5px; /* Add some padding for better readability */
-  text-align: justify; /* Justify text for better appearance */
-  color: #000000;
+    width: 120px; /* Smaller size */
+    height: 220px; /* Adjusted height to fit content */
+    flex: 0 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Padding around the card */
+    text-align: center;
+    scroll-snap-align: start;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Prevent overflow */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space out children */
 }
 
 .profile-pic {
@@ -491,14 +477,25 @@ body {
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced margin to minimize space */
 }
 
-.profilestory-swipe::-webkit-scrollbar {
-    height: 20px;
+.card-text {
+    display: none; /* Hide the paragraph text by default */
+    max-height: 450px; /* Set a maximum height for the text */
+    overflow-y: auto; /* Allow vertical scrolling if text exceeds max height */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    color: #000;
 }
 
-.profilestory-swipe::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 4px;
+.card.maximized {
+    width: 320px; /* Maximized size */
+    height: 450px; /* Maximized height */
+    z-index: 1; /* To bring it to the front */
+    overflow: hidden; /* Prevent overflow in maximized state */
+}
+
+.card.maximized .card-text {
+    display: block; /* Show the paragraph text when maximized */
 }
