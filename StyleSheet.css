@@ -440,6 +440,7 @@ body {
   
   }
 
+/*I think this is where you left of chris*/
   .settings_box{
     
   }
@@ -451,35 +452,53 @@ body {
     gap: 10px;
     scroll-snap-type: x mandatory;
     justify-content: center;
+    
 }
 
 .card {
-    width: 280px;
-    flex: 0 0 auto;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    scroll-snap-align: start;
+  width: 120px; /* Smaller size */
+  height: 160px; /* Smaller height */
+  flex: 0 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.card.maximized {
+  width: 320px; /* Maximized size */
+  height: 450px; /* Maximized height */
+  z-index: 1; /* To bring it to the front */
+  overflow: hidden; /* Prevent overflow in maximized state */
+}
+
+.card p {
+  max-height: 300px; /* Set a max height for the text */
+  overflow-y: auto; /* Allow vertical scrolling if text exceeds max height */
+  margin: 0; /* Reset margin */
+  padding: 5px; /* Add some padding for better readability */
+  text-align: justify; /* Justify text for better appearance */
+  color: #000000;
 }
 
 .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
 }
 
 .profilestory-swipe::-webkit-scrollbar {
-    height: 8px;
+    height: 20px;
 }
 
 .profilestory-swipe::-webkit-scrollbar-thumb {
     background-color: #ccc;
     border-radius: 4px;
 }
-
-
-  

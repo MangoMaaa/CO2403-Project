@@ -36,30 +36,42 @@
 
 
 <div class="profilestory-swipe">
-  <div class="card">
+  <div class="card" onclick="toggleMaximize(this)">
       <img src="personprofileone.jpg" alt="Profile 1" class="profile-pic">
-      <h3> Student A </h3>
+      <h3>Student A</h3>
       <p>In one of our first lectures my lecturer made a statement: Oil is no longer the most valauble commodity - data is.  Cybersecurity has come to mean a lot more than protecting computers and passwords; it has become the means to safeguard the very fabric of the digital world. 
-      Whilst I was tremendously passionate about History I was not keen on pursuing it as a career, and felt massively disillusioned by the occupational routes Law and Politics offered as I failed to see the sincere change brought about by those in the positions I sought to follow.
-      Although I wasnt a technical person, I was also massively paranoid. with the state of the world i was always indirectly concerned about cyber safety and would always try out for myself how much personal information attributed to my friends and family was publicly accessible on the internet and how much information we voluntarily shared out there.
-      As exam results and university confirmations were nearing I was afraid it may be  unfeasible to study as my a level subjects didnt seem to directly correspond with cybersecurity and was worried i would find it too challenging. Nevertheless I chose to perservere with my prefeered course and i can honestly say it was on of the best decisions I made.</p>
+        Whilst I was tremendously passionate about History I was not keen on pursuing it as a career, and felt massively disillusioned by the occupational routes Law and Politics offered as I failed to see the sincere change brought about by those in the positions I sought to follow.
+        Although I wasnt a technical person, I was also massively paranoid. with the state of the world i was always indirectly concerned about cyber safety and would always try out for myself how much personal information attributed to my friends and family was publicly accessible on the internet and how much information we voluntarily shared out there.
+        As exam results and university confirmations were nearing I was afraid it may be  unfeasible to study as my a level subjects didnt seem to directly correspond with cybersecurity and was worried i would find it too challenging. Nevertheless I chose to perservere with my prefeered course and i can honestly say it was on of the best decisions I made</p>
   </div>
-  <div class="card">
+  <div class="card" onclick="toggleMaximize(this)">
       <img src="personprofile2.jpg" alt="Profile 2" class="profile-pic">
       <h3>Person 2</h3>
-      <p> Ive always loved computers since i could remember. I never saw myslef studying anything other than computer science. After I studied Computer Science A Levels which i enjoyed i still thought studying computer science at undergraduate level would also be repetitive. I decided to explore some more options. I went online and to the careers office at my college and thats when they suggested Cyber Security. I was a it hesistant as it is a relatively new degree, I didn't know anyone who was studying it or was already in the field and was afraid and unsure whether this was the right career for me. Eventually after extensive research i decided to give it a go, unlike computer science i felt cyber security was a role that would always be needed no matter how far technology develops.  </p>
+      <p>Ive always loved computers since i could remember. I never saw myslef studying anything other than computer science. After I studied Computer Science A Levels which i enjoyed i still thought studying computer science at undergraduate level would also be repetitive. I decided to explore some more options. I went online and to the careers office at my college and thats when they suggested Cyber Security. I was a it hesistant as it is a relatively new degree, I didn't know anyone who was studying it or was already in the field and was afraid and unsure whether this was the right career for me. Eventually after extensive research i decided to give it a go, unlike computer science i felt cyber security was a role that would always be needed no matter how far technology develops.</p>
   </div>
-  <div class="card">
+  <div class="card" onclick="toggleMaximize(this)">
       <img src="personprofile3.jpg" alt="Profile 3" class="profile-pic">
       <h3>Person 3</h3>
-      <p> I never saw myself studuing</p>
+      <p>I never saw myself studying...</p>
   </div>
-  <div class="card">
+  <div class="card" onclick="toggleMaximize(this)">
       <img src="personprofile4.jpg" alt="Profile 4" class="profile-pic">
       <h3>Person 4</h3>
       <p>Some text about Person 4.</p>
   </div>
 </div>
+
+<script>
+  function toggleMaximize(card) {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(function(c) {
+          if (c !== card) {
+              c.classList.remove('maximized');
+          }
+      });
+      card.classList.toggle('maximized');
+  }
+</script>
 
 
 
