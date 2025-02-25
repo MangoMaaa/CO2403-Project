@@ -212,7 +212,7 @@ body {
     padding: 15px;
     width: 90%;
     max-width: 800px;
-    border: 5px solid #00f7ff;
+    border: 5px solid #81ff1a;
     border-radius: 10px;
     background: #222;
   
@@ -222,7 +222,7 @@ body {
     text-align: center;
     font-size: 1.5rem;
     padding: 10px;
-    background: #00f7ff;
+    background: #FF6D69;
     color: #000000;
     border-radius: 5px 5px 0 0;
   
@@ -241,6 +241,16 @@ body {
     cursor: pointer;
   
   }
+
+  .arcade-content button:hover {
+    background: #e85c58;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  
+  }
   
   
   .arcade-screen {
@@ -248,7 +258,7 @@ body {
     width: 90%;
     max-width: 600px;
     height: 300px;
-    border: 5px solid #00f7ff;
+    border: 5px solid #14d427;
     border-radius: 10px;
     background: #000;
     display: flex;
