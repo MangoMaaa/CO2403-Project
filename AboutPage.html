@@ -88,6 +88,11 @@
     </ul>
   
   </footer>
-
+<script>
+    var app = document.getElementsByTagName("BODY")[0];
+    if (localStorage.lightMode == "light") {
+        app.setAttribute("light-mode", "light");
+    }
+</script>
 </body>
 </html>

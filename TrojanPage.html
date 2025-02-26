@@ -234,6 +234,11 @@ slides[currentIndex].classList.add('active');
     <li><a href="link" target="_blank">Reference 3</a></li>
   </ul>
 </footer>
-
+<script>
+  var app = document.getElementsByTagName("BODY")[0];
+  if (localStorage.lightMode == "light") {
+      app.setAttribute("light-mode", "light");
+  }
+</script>
 </body>
 </html>

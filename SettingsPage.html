@@ -37,16 +37,11 @@
 
     <!-- add introductory paragraph here-->
     <div class="body">
-        <h1 class="column">Settings</h1>
-        <div>settings stuff.</div>
-        <div id="settings_box">
-                <input type="radio" id="1" name="placeholder" value="placeholder">
-                <label for="Q1">placeholder</label>
-                <input type="radio" id="2" name="placeholder" value="placeholder2">
-                <label for="2">placeholder</label>
-                <input type="radio" id="3" name="placeholder" value="placeholder3">
-                <label for="3">placeholder</label>
-        </div>
+        <h1>Settings</h1>
+            <button class="settings-button" 
+            aria-label="Toggle Light Mode" 
+            onclick="toggle_light_mode()"> <!--https://henryegloff.com/how-to-code-a-simple-dark-mode-toggle/-->
+            Toggle Dark/Light Mode
     </div>
 
 
@@ -73,5 +68,21 @@
             </div>
         </div>
     </div>
+    <script>
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "light") {
+            app.setAttribute("light-mode", "light");
+        }
+        function toggle_light_mode() {
+            var app = document.getElementsByTagName("BODY")[0];
+            if (localStorage.lightMode == "light") {
+            localStorage.lightMode = "dark";
+            app.setAttribute("light-mode", "dark");
+            } else {
+            localStorage.lightMode = "light";
+            app.setAttribute("light-mode", "light");
+            }		
+        }
+    </script>
 </body>
 </html>

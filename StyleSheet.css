@@ -8,6 +8,11 @@ body {
     align-items: center;
   
   }
+  /*https://henryegloff.com/how-to-code-a-simple-dark-mode-toggle/*/
+  body[light-mode=light]{
+    background: linear-gradient(to bottom, #ccc9e7, #75a0ca, #637dcf);
+    color: #1a1919;
+  }
   
   .map {
     font-family: consolas;
@@ -388,7 +393,7 @@ body {
   
   button {
     margin-top: 20px;
-    padding: 10px 15px;
+    padding: 15px;
     font-size: 16px;
     cursor: pointer;
     background-color: #14d427; /* Lively blue color */
@@ -574,3 +579,14 @@ body {
 
 /* Add a blue color to the author */
 .author {color: cornflowerblue;}
+
+.settings-button button {
+  margin-top: 5px;
+  padding: 5px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #2f3633; /* Lively blue color */
+  color: white;
+  border: none;
+  border-radius: 2px;
+}
