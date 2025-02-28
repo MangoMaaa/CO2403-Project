@@ -11,7 +11,8 @@ body {
   /*https://henryegloff.com/how-to-code-a-simple-dark-mode-toggle/*/
   body[light-mode=light]{
     background: linear-gradient(to bottom, #ccc9e7, #75a0ca, #637dcf);
-    color: #1a1919;
+    color: #000000;
+    font-weight: bold;
   }
   
   .map {
