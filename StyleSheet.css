@@ -7,6 +7,7 @@ body {
     justify-content: center; /* Center horizontally */
     align-items: center;
     padding: 30px;
+    text-align: center;
   
   }
 
@@ -18,7 +19,8 @@ body {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 10px; /* Adjust this value to your preference */
+    margin-bottom: 7px; /* Adjust this value to your preference */
+    
   }
 
   p {
@@ -26,6 +28,11 @@ body {
     margin-bottom: 5px; /* Adjust as needed */
   }
   
+  .bullets {
+    font-family: Consolas;
+    align-content: center;
+  }
+
   .map {
     font-family: consolas;
     display: flex;
@@ -644,9 +651,9 @@ body[dyslexia-mode="on"] {
     width: 100%;
     overflow: hidden;
     background: transparent;
-    color: #14d427;
+    color: #16e62b;
     font-family: 'Courier New';
-    font-weight: 870;
+    font-weight: 880;
     padding: 10px 0;
     font-size: 16px;
     white-space: nowrap;
