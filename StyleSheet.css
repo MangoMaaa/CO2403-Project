@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif, Consolas;
-    background: linear-gradient(to bottom, #030116, #001f3f, #2A3B72); /* Seamless gradient from black to dark blue to #2A3B72 */
+    background: linear-gradient(to bottom, #030116, #001f3f, #1d2950); /* Seamless gradient from black to dark blue to #2A3B72 */
     color: #fff;
     justify-content: center; /* Center horizontally */
     align-items: center;
@@ -420,10 +420,10 @@ body {
   #hologram-video {
     margin: 0 auto;
     display: block; /* Ensures it's treated as a block-level element */
-    max-width: 15%; /* Prevents overflow issues */
+    max-width: 22%; /* Prevents overflow issues */
     height: auto;
     mix-blend-mode: screen; /* Makes black areas invisible */
-    opacity: 0.4; /* Add transparency */
+    opacity: 0.5; /* Add transparency */
     filter: brightness(1.5) saturate(1.5); /* Enhance the holographic look */
     transform: rotateX(20deg); /* Adds pseudo-3D effect */
   }
@@ -647,7 +647,7 @@ body[dyslexia-mode="on"] {
   .banner-text {
     display: inline-block;
     white-space: nowrap;
-    animation: scroll-text 30s linear infinite;
+    animation: scroll-text 32s linear infinite;
   }
 
   /* Keyframes for smooth scrolling */
