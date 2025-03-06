@@ -613,3 +613,17 @@ body {
 .option:hover {
   background-color: #d0d0d0;
 }
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('fonts/OpenDyslexic-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply the font when dyslexia mode is enabled */
+body[dyslexia-mode="on"] {
+  font-family: 'OpenDyslexic', Arial, sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
