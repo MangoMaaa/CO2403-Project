@@ -2,17 +2,28 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif, Consolas;
-    background: linear-gradient(to bottom, #030116, #001f3f, #1d2950); /* Seamless gradient from black to dark blue to #2A3B72 */
+    background: linear-gradient(to bottom, #030116, #001f3f); /* Seamless gradient from black to dark blue to #2A3B72 */
     color: #fff;
     justify-content: center; /* Center horizontally */
     align-items: center;
+    padding: 30px;
   
   }
+
   /*https://henryegloff.com/how-to-code-a-simple-dark-mode-toggle/*/
   body[light-mode=light]{
     background: linear-gradient(to bottom, #ccc9e7, #75a0ca, #637dcf);
     color: #000000;
     font-weight: bold;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px; /* Adjust this value to your preference */
+  }
+
+  p {
+    margin-top: 0; /* Removes any default space above the paragraph */
+    margin-bottom: 5px; /* Adjust as needed */
   }
   
   .map {
