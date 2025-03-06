@@ -91,6 +91,30 @@
             app.setAttribute("light-mode", "light");
             }		
         }
+
+        
+        document.addEventListener("DOMContentLoaded", function () {
+        const app = document.body;
+        
+        // Check localStorage and apply the saved mode
+        if (localStorage.getItem("dyslexiaMode") === "on") {
+            app.setAttribute("dyslexia-mode", "on");
+        }
+        });
+
+        function toggleDyslexiaFont() {
+        const app = document.body;
+        const isDyslexiaMode = app.getAttribute("dyslexia-mode") === "on";
+
+        if (isDyslexiaMode) {
+            app.removeAttribute("dyslexia-mode");
+            localStorage.setItem("dyslexiaMode", "off");
+        } else {
+            app.setAttribute("dyslexia-mode", "on");
+            localStorage.setItem("dyslexiaMode", "on");
+        }
+    }
+
     </script>
 </body>
 </html>
