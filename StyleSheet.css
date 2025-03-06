@@ -634,6 +634,8 @@ body[dyslexia-mode="on"] {
     overflow: hidden;
     background: transparent;
     color: #14d427;
+    font-family: 'Courier New';
+    font-weight: 870;
     padding: 10px 0;
     font-size: 16px;
     white-space: nowrap;
@@ -654,6 +656,6 @@ body[dyslexia-mode="on"] {
       transform: translateX(0%);  /* Start from the beginning */
     }
     to {
-      transform: translateX(-100%);  /* Move fully to the left */
+      transform: translateX(-50%);  /* Move fully to the left */
     }
   }
