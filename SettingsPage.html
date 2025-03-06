@@ -103,18 +103,34 @@
         });
 
         function toggleDyslexiaFont() {
-        const app = document.body;
-        const isDyslexiaMode = app.getAttribute("dyslexia-mode") === "on";
+        // Check current dyslexia mode in localStorage
+        let currentMode = localStorage.getItem("dyslexiaMode");
 
-        if (isDyslexiaMode) {
-            app.removeAttribute("dyslexia-mode");
+        // Toggle the value
+        if (currentMode === "on") {
             localStorage.setItem("dyslexiaMode", "off");
         } else {
-            app.setAttribute("dyslexia-mode", "on");
             localStorage.setItem("dyslexiaMode", "on");
+        }
+
+        // Apply the changes immediately (optional)
+        applyDyslexiaFont();
+    }
+
+    // Function to apply dyslexia font if needed
+    function applyDyslexiaFont() {
+        if (localStorage.getItem("dyslexiaMode") === "on") {
+            document.body.setAttribute("dyslexia-mode", "on");
+        } else {
+            document.body.removeAttribute("dyslexia-mode");
         }
     }
 
+    // Call this on page load to apply saved settings
+    window.onload = function() {
+        applyDyslexiaFont();
+    }
+    
     </script>
 </body>
 </html>
