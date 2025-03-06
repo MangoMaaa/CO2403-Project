@@ -628,3 +628,32 @@ body[dyslexia-mode="on"] {
   line-height: 1.5;
 }
 
+  /* News banner container */
+  .news-banner {
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    color: #14d427;
+    padding: 10px 0;
+    font-size: 16px;
+    white-space: nowrap;
+    position: relative;
+    text-align: center;
+  }
+
+  /* Scrolling text */
+  .banner-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-text 30s linear infinite;
+  }
+
+  /* Keyframes for smooth scrolling */
+  @keyframes scroll-text {
+    from {
+      transform: translateX(0%);  /* Start from the beginning */
+    }
+    to {
+      transform: translateX(-100%);  /* Move fully to the left */
+    }
+  }
