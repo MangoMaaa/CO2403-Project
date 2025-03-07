@@ -386,7 +386,7 @@ body {
   @media (max-width: 480px) {
     .arcade-nav ul {
       flex-direction: column; /* Stack items vertically */
-      align-items: center; /* Center-align the stacked items */
+      align-items: center; /* Center-align the items */
       gap: 10px; /* Adjust gap for smaller screens */
     }
   
@@ -464,7 +464,7 @@ body {
     padding: 15px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #14d427; /* Lively blue color */
+    background-color: #14d427; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -689,7 +689,7 @@ body {
   padding: 5px 5px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #2f3633; /* Lively blue color */
+  background-color: #2f3633; 
   color: white;
   border: none;
   border-radius: 2px;
@@ -703,7 +703,7 @@ body {
   border: 2px solid #15b024; /* Thin neon green border */
   font-size: larger;
   
-  color: #FFD700; /* Gold text for contrast */
+  color: #FFD700; 
   font-family: 'Press Start 2P', Arial, sans-serif;
   text-align: center;
   border-radius: 10px;
