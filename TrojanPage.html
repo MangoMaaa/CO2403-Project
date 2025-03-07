@@ -63,7 +63,8 @@
   <div class="hologram-text">This is your hologram information!</div>
 </video>
 
-
+<br>
+<h2> Types of Trojans: </h2>
 <br> <br>
 <div class="slide-container">
   <div class="slide-box active">
@@ -210,55 +211,40 @@
   loadQuestion();
 </script>
 
-
-<h2> How does a Trojan Attack work?? </h2>
-<div class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/C0kLqvNuRrU?si=Fw3g7gD2LoIf1DmT" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen>
-  </iframe>
-</div>
+<br> <br> <br>
 
 
-<h2> Case Study: 3 Trojan Examples </h2>
+<h2> Case Studies: </h2>
+<br>
 <!-- Slideshow container pasted from w3schools -->
 <div class="casestudy-container">
-
-  <!-- Full-width slides/quotes -->
-  <div class="mySlides">
-    <p class="author"> Agent Tesla 2020</p>
-    <p> Agent Tesla, present threat that exploited the desperate conditions of the COVID-19 pandemic, acts as a key logger and remote access malware. After it spreads through PDFs, Word Documents or spreadsheets it captures keystrokes, screenshots user activity, steal clipboard data and even extract stored credentials from web browsers etc. The pandemic faciliated a greater susceptibility to this attack where seemingly important emails such as WHO alerts to attract victims. Since it is relatively new and easy to use, so there is little knowledge over newer versions and low skilled threat actors can use it. </p>
-   
+  <!-- Full-width slides -->
+  <div class="mySlides active">
+      <p class="author">Agent Tesla 2020</p>
+      <p>Agent Tesla, a keylogger and remote access malware, exploited the COVID-19 pandemic. It spread via PDFs, Word docs, and spreadsheets, capturing keystrokes, screenshots, and credentials from web browsers.</p>
   </div>
 
   <div class="mySlides">
-    <p class="author"> Agent Tesla Prevention</p>
-    <p> - Tougher and more desperate times are always exploited. Keep your guard up <br> - Do not enable Macros in Mincrosoft Word <br> - Multi Factor Authentication. As slow and incovenient it is to use, it was created for a reason. USE IT. </p>
-   
+      <p class="author">Agent Tesla Prevention</p>
+      <p>- Be cautious of email attachments during crises. <br>- Disable Macros in Microsoft Word. <br>- Use Multi-Factor Authentication (MFA).</p>
   </div>
 
   <div class="mySlides">
-    <p class="author"> Emotet Allentown 2018</p>
-    <q>Emotet first emerged in 2014 as a banking trojan designed to steal financial credentials and was mainly spread through malicous emails and phishing campaigns. One instance of the attack suffered in Allentown denied external banking transactions, breached 185 of the cities surveillance cameras and police databases could not be accessed. It impacted all city systems that ran Microsoft as it had historically been spread via weaponised Microsoft Word documents and costed the city an estimated $1m to manage and cost billions worldwide in other cases due to it's evolution innto a malwats delivery service. </q>
-    
+      <p class="author">Emotet Attack (2018)</p>
+      <p>Emotet, initially a banking Trojan, evolved into a malware distribution service. It infiltrated city systems, causing $1M in damages and affecting police and banking operations.</p>
   </div>
 
   <div class="mySlides">
-    <p class="author">- NjRAT 2018-19</p>
-    <q> Utlised as part of a foreign espionage campaign, it targetted government agencies, military personell and businesses in the Middle East, North Africa and Europe. By way of spearfishing emails and websites infected with malware, the trojan was distributed by opening backdoors into a victims system. Keystrokes, IoT devices data such as webcams, stolen classified files, and remote commands, extracted data from the victims to a Command and Control server allowing multiple infected machines to be mamaged remotely. Consequently, governments and private parties suffered from classified leaks and attacks remained undetected for months as NjRAT was designed to evade traditional antivirus software behaviour. </q>
-    
+      <p class="author">NjRAT (2018-2019)</p>
+      <p>NjRAT was used in cyber-espionage targeting governments and businesses in the Middle East and Europe. It enabled attackers to control infected systems remotely.</p>
   </div>
 
-  <!-- Next/prev buttons -->
+  <!-- Next/Prev buttons -->
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-
-<!-- Dots/bullets/indicators -->
+<br>
+<!-- Dot Indicators -->
 <div class="dot-container">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
@@ -295,6 +281,19 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+
+<h2> How does a Trojan Attack work?? </h2>
+<div class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/C0kLqvNuRrU?si=Fw3g7gD2LoIf1DmT" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
+</div>
+
 
 <div class="baitalert">
 <button onclick="showAlert()">FREE GIFT!</button>

@@ -402,7 +402,7 @@ body {
   .slide-container {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     margin: auto;
 }
 
@@ -429,7 +429,7 @@ body {
 }
 
 .slide-box p {
-    font-size: 14px;
+    font-size: 17px;
     color: #ffffff; /* Gold for readability */
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
@@ -576,27 +576,60 @@ body {
     display: block; /* Show the paragraph text when maximized */
 }
 
+/* Case Study Container */
 .casestudy-container {
   position: relative;
-  background: #f1f1f1;
-  color: #000000;
-  font-family: Consolas;
-  padding: 40px;
+  background: rgba(10, 30, 10, 0.9); /* Dark green cyber background */
+  color: #FFD700; /* Gold text */
+  font-family: 'Press Start 2P', Arial, sans-serif;
+  padding: 30px;
   border-radius: 10px;
-  max-width: 600px;  /* Restricts width */
-  margin: auto;  /* Centers the slideshow */
-  overflow: hidden; /* Ensures no overflow issues */
-}
-
-/* Slides */
-.mySlides {
-  display: none;
+  max-width: 700px;  
+  margin: auto;
+  overflow: hidden; /* Prevents text overflow */
   text-align: center;
-  padding: 40px 20px;
-  font-size: 18px;
+  border: 2px solid #14d427; /* Neon green border */
+  box-shadow: 0 0 12px #14d427; /* Single glow effect */
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Next & previous buttons */
+
+
+/* Case Study Slides */
+.mySlides {
+  display: none; /* Hide all slides by default */
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(5, 20, 5, 0.95); /* Darker cyber green */
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* Active Slide */
+.mySlides.active {
+  display: block;
+}
+
+/* Case Study Title */
+.author {
+  color: #16e62b; /* Bright green */
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #16e62b;
+  margin-bottom: 10px;
+}
+
+/* Case Study Text */
+.mySlides p {
+  font-size: 17px;
+  color: #ffffff; /* Gold for readability */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+/* Next & Previous Buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -604,24 +637,33 @@ body {
   transform: translateY(-50%);
   width: auto;
   padding: 12px;
-  background: rgba(0,0,0,0.6);
-  color: white;
+  background: #14d427;
+  color: #000;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 5px;
   user-select: none;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  border: 2px solid #095c10;
 }
 
+/* Position of Buttons */
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* The dot/bullet container */
+/* Hover Effects */
+.prev:hover, .next:hover {
+  background: #5df674;
+  color: #000;
+}
+
+/* Dot Indicators */
 .dot-container {
   text-align: center;
   padding: 10px;
 }
 
-/* The dots */
 .dot {
   cursor: pointer;
   height: 12px;
@@ -633,13 +675,7 @@ body {
   transition: background-color 0.6s ease;
 }
 
-.casestudy-container .dot.active, 
-.casestudy-container .dot:hover {
-  background-color: #dcd91f ;
-}
 
-/* Add a blue color to the author */
-.author {color: cornflowerblue;}
 
 .settings-button button {
   margin-top: 5px;
@@ -653,11 +689,12 @@ body {
 }
 
 .quiz-container {
-  max-width: 800px;
+  max-width: 700px;
   margin: 30px auto;
   padding: 20px;
   background: rgba(10, 30, 10, 0.85); /* Dark green cyber background (same as slides) */
   border: 2px solid #15b024; /* Thin neon green border */
+  font-size: larger;
   
   color: #FFD700; /* Gold text for contrast */
   font-family: 'Press Start 2P', Arial, sans-serif;
@@ -665,6 +702,7 @@ body {
   border-radius: 10px;
   position: relative;
   animation: fadeIn 0.5s ease-in-out;
+  box-shadow: 0 0 15px #14d427; /* Glow effect */
 }
 
 /* Glowing border effect like slideshow */
@@ -675,7 +713,7 @@ body {
   left: -4px;
   right: -4px;
   bottom: -4px;
-  box-shadow: 0 0 15px #14d427; /* Glow effect */
+  
   border-radius: 10px;
   z-index: -1;
 }
@@ -713,7 +751,7 @@ body {
 }
 
 .option:active {
-  background-color: #b90a0a; /* Dimmed red */
+  background-color: #fdfa4b; /* Dimmed red */
   color: #000000;
   box-shadow: 0 0 12px #b32b2b, inset 0 0 6px rgba(255, 255, 255, 0.3);
 }
