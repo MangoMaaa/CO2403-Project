@@ -114,102 +114,7 @@
     - The blue screen of death is a windows error screen that declares that the system can no longer operate safely due to a hardware failure of the termination of an important process. </p>
 
 
-<div class="quiz-container">
-  <h2 id="question">Loading...</h2>
-  <div id="options"></div>
-  <button id="nextButton" onclick="nextQuestion()" style="display:none;">Next</button>
-  <p id="result"></p>
-</div>
 
-<script>
-  const quizData = [
-      {
-          question: "What is a Trojan horse in cybersecurity?",
-          options: [
-              "A type of firewall that blocks malware",
-              "A malicious program that disguises itself as legitimate software",
-              "A secure method for encrypting data",
-              "A technique used to strengthen passwords"
-          ],
-          answer: 1
-      },
-      {
-          question: "How do Trojan viruses typically infect a system?",
-          options: [
-              "Through brute force attacks on passwords",
-              "By being unknowingly downloaded as part of a fake or compromised application",
-              "By exploiting weaknesses in Wi-Fi networks",
-              "Through strong two-factor authentication"
-          ],
-          answer: 1
-      },
-      {
-          question: "What is a common sign that your device may be infected by a Trojan?",
-          options: [
-              "Your internet speed increases significantly",
-              "You receive unexpected pop-ups, slow performance, or find unknown programs running",
-              "Your device becomes immune to all cyber threats",
-              "Your device requests you to restart for an update every day"
-          ],
-          answer: 1
-      }
-  ];
-
-  let currentQuestion = 0;
-  let score = 0;
-
-  function loadQuestion() {
-      const questionElement = document.getElementById("question");
-      const optionsElement = document.getElementById("options");
-      const nextButton = document.getElementById("nextButton");
-      const resultElement = document.getElementById("result");
-
-      // Clear previous options and result
-      optionsElement.innerHTML = "";
-      resultElement.textContent = "";
-
-      if (currentQuestion < quizData.length) {
-          let quiz = quizData[currentQuestion];
-          questionElement.textContent = quiz.question;
-
-          quiz.options.forEach((option, index) => {
-              let button = document.createElement("button");
-              button.textContent = option;
-              button.className = "option";
-              button.onclick = () => checkAnswer(index);
-              optionsElement.appendChild(button);
-          });
-
-          nextButton.style.display = "none"; // Hide the Next button until the answer is checked
-      } else {
-          document.querySelector(".quiz-container").innerHTML = `<h2>Quiz Complete!</h2><p>Your score: ${score}/${quizData.length}</p>`;
-      }
-  }
-
-  function checkAnswer(selectedIndex) {
-      const correctAnswerIndex = quizData[currentQuestion].answer;
-      if (selectedIndex === correctAnswerIndex) {
-          score++;
-          document.getElementById("result").textContent = "Correct!";
-      } else {
-          document.getElementById("result").textContent = "Wrong!";
-      }
-      
-      // Disable options after selection
-      const options = document.querySelectorAll(".option");
-      options.forEach(button => button.disabled = true);
-      
-      // Show the Next button
-      document.getElementById("nextButton").style.display = "inline-block";
-  }
-
-  function nextQuestion() {
-      currentQuestion++;
-      loadQuestion();
-  }
-
-  loadQuestion();
-</script>
 
 <br> <br> <br>
 
@@ -311,6 +216,103 @@ function showSlides(n) {
   function showAlert() {
   alert("Hi there! As a gift from our team at UCLan heres a free starter guide to a beginners journey in cyber security. Click the link below to download the PDF. HAPPY HACKING ;) www.thiswasbait.com. And that is how simply a trojan attack can be carried out!");
   }
+</script>
+
+<div class="quiz-container">
+  <h2 id="question">Loading...</h2>
+  <div id="options"></div>
+  <button id="nextButton" onclick="nextQuestion()" style="display:none;">Next</button>
+  <p id="result"></p>
+</div>
+
+<script>
+  const quizData = [
+      {
+          question: "What is a Trojan horse in cybersecurity?",
+          options: [
+              "A type of firewall that blocks malware",
+              "A malicious program that disguises itself as legitimate software",
+              "A secure method for encrypting data",
+              "A technique used to strengthen passwords"
+          ],
+          answer: 1
+      },
+      {
+          question: "How do Trojan viruses typically infect a system?",
+          options: [
+              "Through brute force attacks on passwords",
+              "By being unknowingly downloaded as part of a fake or compromised application",
+              "By exploiting weaknesses in Wi-Fi networks",
+              "Through strong two-factor authentication"
+          ],
+          answer: 1
+      },
+      {
+          question: "What is a common sign that your device may be infected by a Trojan?",
+          options: [
+              "Your internet speed increases significantly",
+              "You receive unexpected pop-ups, slow performance, or find unknown programs running",
+              "Your device becomes immune to all cyber threats",
+              "Your device requests you to restart for an update every day"
+          ],
+          answer: 1
+      }
+  ];
+
+  let currentQuestion = 0;
+  let score = 0;
+
+  function loadQuestion() {
+      const questionElement = document.getElementById("question");
+      const optionsElement = document.getElementById("options");
+      const nextButton = document.getElementById("nextButton");
+      const resultElement = document.getElementById("result");
+
+      // Clear previous options and result
+      optionsElement.innerHTML = "";
+      resultElement.textContent = "";
+
+      if (currentQuestion < quizData.length) {
+          let quiz = quizData[currentQuestion];
+          questionElement.textContent = quiz.question;
+
+          quiz.options.forEach((option, index) => {
+              let button = document.createElement("button");
+              button.textContent = option;
+              button.className = "option";
+              button.onclick = () => checkAnswer(index);
+              optionsElement.appendChild(button);
+          });
+
+          nextButton.style.display = "none"; // Hide the Next button until the answer is checked
+      } else {
+          document.querySelector(".quiz-container").innerHTML = `<h2>Quiz Complete!</h2><p>Your score: ${score}/${quizData.length}</p>`;
+      }
+  }
+
+  function checkAnswer(selectedIndex) {
+      const correctAnswerIndex = quizData[currentQuestion].answer;
+      if (selectedIndex === correctAnswerIndex) {
+          score++;
+          document.getElementById("result").textContent = "Correct!";
+      } else {
+          document.getElementById("result").textContent = "Wrong!";
+      }
+      
+      // Disable options after selection
+      const options = document.querySelectorAll(".option");
+      options.forEach(button => button.disabled = true);
+      
+      // Show the Next button
+      document.getElementById("nextButton").style.display = "inline-block";
+  }
+
+  function nextQuestion() {
+      currentQuestion++;
+      loadQuestion();
+  }
+
+  loadQuestion();
 </script>
 
 <script>
