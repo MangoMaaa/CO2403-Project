@@ -116,6 +116,8 @@
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QXnNkSeT6dM?si=9fN2EtBjq-5XXMXL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <!-- JavaScript to fix First Slideshow -->
 <script>
 let insiderSlideIndex = 0;
@@ -171,6 +173,38 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 </script>
+
+<script>
+  const quizData = [
+      { question: "What is an insider threat?", options: ["External hacker", "Trusted individual misusing access", "Virus", "Encryption technique"], answer: 1 },
+      { question: "Which of these is an insider threat?", options: ["Employees", "Ex-employees", "Contractors", "All of the above"], answer: 3 },
+      { question: "Common insider attack method?", options: ["Phishing emails", "USB data theft", "Brute force attacks", "DDoS"], answer: 1 }
+  ];
+  
+  let currentQuestion = 0, score = 0;
+  function loadQuestion() {
+      document.getElementById("question").textContent = quizData[currentQuestion].question;
+      document.getElementById("options").innerHTML = quizData[currentQuestion].options.map((option, index) => 
+          `<button class="option" onclick="checkAnswer(${index})">${option}</button>`).join('');
+      document.getElementById("nextButton").style.display = "none";
+  }
+  
+  function checkAnswer(selectedIndex) {
+      if (selectedIndex === quizData[currentQuestion].answer) score++;
+      document.getElementById("result").textContent = selectedIndex === quizData[currentQuestion].answer ? "Correct!" : "Wrong!";
+      document.querySelectorAll(".option").forEach(button => button.disabled = true);
+      document.getElementById("nextButton").style.display = "inline-block";
+  }
+  
+  function nextQuestion() { currentQuestion++; loadQuestion(); }
+  document.addEventListener("DOMContentLoaded", loadQuestion);
+  
+  var slideIndex = 1;
+  function plusSlides(n) { showSlides(slideIndex += n); }
+  function currentSlide(n) { showSlides(slideIndex = n); }
+  function showSlides(n) { document.querySelectorAll(".mySlides").forEach((slide, i) => slide.style.display = (i === n - 1) ? "block" : "none"); }
+  </script>
+  
 
 <br><br>
 <footer class="arcade-footer">
