@@ -107,10 +107,10 @@
 <br>
 <br>
 
-<h3> How to detect a Trojan Infection? </h3>
-<p> - Your computer is running way slower than usual. Trojans tend to come with additional malware that consumes significant (CPU) and memory which can make your computer unstable and sluggish.<br>
-    - The appearanc of applications and softwares you do not recall downloading. In Windows Task manager, the appearance of an unfamiliar app from an unidentified developer can suggest malicious software has been installed. <br>
-    - You experience consistent operating systems crashes and freezing, internet redirects, applications won't start and popups are so frequent you can barely use it. Trojans can manipulate browsers and modify key system settings.<br>
+<h2> How to detect a Trojan Infection? </h2>
+<p> - Your computer is running way slower than usual. Trojans tend to come with additional malware that consumes significant (CPU) and memory which can make your computer unstable and sluggish.<br><br>
+    - The appearanc of applications and softwares you do not recall downloading. In Windows Task manager, the appearance of an unfamiliar app from an unidentified developer can suggest malicious software has been installed. <br><br>
+    - You experience consistent operating systems crashes and freezing, internet redirects, applications won't start and popups are so frequent you can barely use it. Trojans can manipulate browsers and modify key system settings.<br><br>
     - The blue screen of death is a windows error screen that declares that the system can no longer operate safely due to a hardware failure of the termination of an important process. </p>
 
 
@@ -281,7 +281,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
-
+<br> <br>
 <h2> How does a Trojan Attack work?? </h2>
 <div class="video-container">
   <iframe
@@ -326,6 +326,14 @@ function nextSlide() {
 slides[currentIndex].classList.add('active');
 </script>
 
+
+<script>
+  var app = document.getElementsByTagName("BODY")[0];
+  if (localStorage.lightMode == "light") {
+      app.setAttribute("light-mode", "light");
+  }
+</script>
+
 <br><br>
 <footer class="arcade-footer">
   <div class="copyright">&copy; UCLan Cyber Arcade.</div>
@@ -349,12 +357,5 @@ slides[currentIndex].classList.add('active');
   </ul>
 </footer>
 
-
-<script>
-  var app = document.getElementsByTagName("BODY")[0];
-  if (localStorage.lightMode == "light") {
-      app.setAttribute("light-mode", "light");
-  }
-</script>
 </body>
 </html>
