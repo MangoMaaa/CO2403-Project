@@ -342,7 +342,7 @@ body {
 }
 
 .arcade-footer a {
-  cursor: pointer;
+    cursor: pointer;
 }
   
   /* Default styles for larger screens */
@@ -399,36 +399,58 @@ body {
   }
   
   
-  /* Ensuring slide container and layout work without images */
   .slide-container {
     position: relative;
     width: 100%;
     max-width: 800px;
     margin: auto;
-  }
-  
-  .slide-box {
+}
+
+.slide-box {
     display: none;  /* Hide all slides by default */
     position: relative;
     text-align: center;
-    border-color: #222;
-  }
-  
-  .slide-box.active {
-    display: block;  /* Only show the active slide */
-  }
-  
-  .slide-text {
-    padding: 20px;
-    background-color: #0f0a2c;  /* Dark background for readability */
-    color: white;  /* White text color */
-    border-color: #222;
     border-radius: 10px;
-    width: 80%;  /* Adjust the width of the text box */
-    margin: 20px auto;
-    box-sizing: border-box;
-    text-align: center;
-  }
+    padding: 20px;
+    background: rgba(10, 30, 10, 0.8); /* Dark green cyber background */
+    border: 2px solid #14d427; /* Neon green border */
+    box-shadow: 0 0 15px #14d427; /* Glow effect */
+    color: #FFD700; /* Gold text for contrast */
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    font-size: 16px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide-box h3 {
+    font-size: 20px;
+    color: #16e62b; /* Bright green for titles */
+    text-shadow: 2px 2px 5px #000;
+}
+
+.slide-box p {
+    font-size: 14px;
+    color: #ffffff; /* Gold for readability */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Show the active slide */
+.slide-box.active {
+    display: block;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
   
   button {
     margin-top: 20px;
@@ -630,27 +652,117 @@ body {
   border-radius: 2px;
 }
 
-
-
-
 .quiz-container {
-  max-width: 600px;
-  margin: auto;
+  max-width: 800px;
+  margin: 30px auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  background: rgba(10, 30, 10, 0.85); /* Dark green cyber background (same as slides) */
+  border: 2px solid #15b024; /* Thin neon green border */
+  
+  color: #FFD700; /* Gold text for contrast */
+  font-family: 'Press Start 2P', Arial, sans-serif;
+  text-align: center;
   border-radius: 10px;
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out;
 }
+
+/* Glowing border effect like slideshow */
+.quiz-container::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  box-shadow: 0 0 15px #14d427; /* Glow effect */
+  border-radius: 10px;
+  z-index: -1;
+}
+
+/* Quiz Title (Matches Slideshow Headers) */
+#question {
+  font-size: 20px;
+  color: #16e62b; /* Bright green title */
+  text-shadow: 2px 2px 5px #000;
+  padding: 10px;
+}
+
+/* Quiz Options (Matching Slideshow Buttons) */
 .option {
   display: block;
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #14d427;
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 16px;
+  color: #000000; /* Black text */
+  background-color: #ffffff; /* Gold background */
+  border: 2px solid #14d427; /* Green border */
+  border-radius: 8px;
+  font-family: Consolas;
+  font-weight: bold;
   cursor: pointer;
-  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 }
+
+/* Hover & Active Effects (Similar to Slideshow Navigation) */
 .option:hover {
-  background-color: #d0d0d0;
+  background-color: #e3ffe4; /* Dimmed orange hover */
+  color: #000;
+  
 }
+
+.option:active {
+  background-color: #b90a0a; /* Dimmed red */
+  color: #000000;
+  box-shadow: 0 0 12px #b32b2b, inset 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+/* Next Button (Same Style as Slideshow Arrows) */
+#nextButton {
+  display: none;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #14d427; /* Neon green */
+  color: white;
+  border: 2px solid #FFD700;
+  border-radius: 5px;
+  font-family: 'Press Start 2P', Arial, sans-serif;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px #14d427, inset 0 0 5px rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+/* Hover effect (Matches Slideshow Buttons) */
+#nextButton:hover {
+  background-color: #FFD700;
+  color: #000;
+  box-shadow: 0 0 10px #FFD700, inset 0 0 5px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Correct / Incorrect Answer Feedback */
+#result {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Correct Answer */
+.correct {
+  color: #16e62b; /* Bright green */
+  text-shadow: 0 0 8px #16e62b;
+}
+
+/* Incorrect Answer */
+.wrong {
+  color: #b32b2b; /* Dimmed red */
+  text-shadow: 0 0 8px #b32b2b;
+}
+
 
 @font-face {
   font-family: 'OpenDyslexic';
