@@ -43,6 +43,13 @@ body {
     margin: 0 auto;  
   
   }
+
+  .tenor-gif-embed {
+    max-width: 200px;  /* Set a max width (adjust as needed) */
+    width: 100%;       /* Ensures it doesn't exceed the max-width */
+    height: auto;      /* Keeps the aspect ratio intact */
+    margin: 0 auto;    /* Centers the GIF horizontally */
+}
   
   /* Gradient section in the middle of the page */
   .gradient-section {
