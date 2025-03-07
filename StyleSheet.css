@@ -12,6 +12,12 @@ body {
   
   }
 
+  img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
   /*https://henryegloff.com/how-to-code-a-simple-dark-mode-toggle/*/
   body[light-mode=light]{
     background: linear-gradient(to bottom, #ccc9e7, #75a0ca, #637dcf);

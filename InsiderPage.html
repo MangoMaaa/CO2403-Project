@@ -32,8 +32,120 @@
   <br>
 
 <h2> What is an Insider Threat? </h2>
-<p>A bachelors degree in Cyber Security refers to the study of defending computers, people and information from malicious actors who target systems for a variety of reasons. According to a verizon data breach report, it was said that ~20% of breaches were caused by actors within an organisation. <sup>1</sup> </p>
+<p> An insider threat is a threat that arises from any person who has or had authorised access to knowledge ofa comapanies resources, including personell, facilities, networks and systems, and has the potential to harm an organisation. According to a verizon data breach report, it was said that ~20% of breaches were caused by actors within an organisation. <sup>1</sup> </p>
 <br>
+
+<img src="insiderstatistic.png" alt="Description of image">
+
+
+<br> <br>
+<h2> Types of Insider Breaches: </h2>
+<br> <br>
+<div class="slide-container">
+  <div class="slide-box active">
+    <div class="slide-text">
+      <h3>Unintentional: Negligence</h3>
+      <p> An insider that exposes an organisation to a cyber threat out of carelessnes or stupidity. However, negligent insiders are usually aware of Security policies yet they choose to ignore them out of laziness which can put the company at a great stake. Examples can include losing storage devices  with important info, or ignoring security updates and alerts.</p>
+    </div>
+  </div>
+
+  <div class="slide-box">
+    <div class="slide-text">
+      <h3>Unintentional: Accidental</h3>
+      <p> Mistakenly casues an unintended risk to an organisation. This can include mistyping an email address, sending a business document to a competitor or accidentally clicking a hyperlink or attachment from a phishing email.</p>
+    </div>
+  </div>
+
+  <div class="slide-box">
+    <div class="slide-text">
+      <h3>Intentional: </h3>
+      <p>Often referred to as a Malicious Insider, intentional actions are performed with the comapanies worst interests at heart. Individuals usually act for personal benefit seeking monetary compensation or an alleviation of personal grievances. This can include leaking sensitive information, harrassing associates and stealing intellectul property in hope of faslely advancing their careers.</p>
+    </div>
+  </div>
+
+
+  <div class="slide-box">
+    <div class="slide-text">
+      <h3>Intentional: Third Party</h3>
+      <p>An individuls with no corporate or formal membership of an organisation who have been granted some access to facilities or systems. These threats can be direct or indirect and often times, these individuals may disguise the fact that they approached said company for the sole reason of gathering information to work against them. 
+        </p>
+    </div>
+  </div>
+</div>
+
+<div class="button-container">
+  <!-- Only one "Next" button to control all slides -->
+  <button onclick="nextSlide()">Next</button>
+</div>
+<br><br>
+<br>
+<br>
+
+<h2> How to identify an Insider?</h2>
+<p>There are plenty of tools and measures in place that can help companies identify potential insiders: <br>
+- </p>
+
+<h2> Case Studies </h2>
+<!-- Slideshow container pasted from w3schools -->
+<div class="casestudy-container">
+
+  <!-- Full-width slides/quotes -->
+  <div class="mySlides">
+    <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
+    <p class="author">- John Keats</p>
+  </div>
+
+  <div class="mySlides">
+    <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+    <p class="author">- Ernest Hemingway</p>
+  </div>
+
+  <div class="mySlides">
+    <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+    <p class="author">- Thomas A. Edison</p>
+  </div>
+
+  <!-- Next/prev buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Dots/bullets/indicators -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<!-- Code pasted from w3 schools -->
+<script> 
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
     <div class="quiz-container">
       <h2 id="question">Loading...</h2>
@@ -165,70 +277,7 @@
 
 </script>
 
-<h2> Case Study: 3 Trojan Examples </h2>
-<!-- Slideshow container pasted from w3schools -->
-<div class="casestudy-container">
 
-  <!-- Full-width slides/quotes -->
-  <div class="mySlides">
-    <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
-    <p class="author">- John Keats</p>
-  </div>
-
-  <div class="mySlides">
-    <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
-    <p class="author">- Ernest Hemingway</p>
-  </div>
-
-  <div class="mySlides">
-    <q>I have not failed. I've just found 10,000 ways that won't work.</q>
-    <p class="author">- Thomas A. Edison</p>
-  </div>
-
-  <!-- Next/prev buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-
-<!-- Dots/bullets/indicators -->
-<div class="dot-container">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-
-<!-- Code pasted from w3 schools -->
-<script> 
-  var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
-
-<body>
 
   <br><br>
   <footer class="arcade-footer">
@@ -236,8 +285,9 @@ function showSlides(n) {
     <div class="references-heading">References</div>
     <ul>
       <li>
-        <a href="https://www.researchgate.net/publication/353002500_Cyberthreats_on_Implantable_Medical_Devices" target="_blank" aria-label="Read the research paper on Cyberthreats on Implantable Medical Devices">
-          Cyberthreats on Implantable Medical Devices, M. N. A. Sabra
+        <a href="https://www.verizon.com/business/en-gb/resources/2022-data-breach-investigations-report-dbir.pdf"
+         target="_blank" aria-label="Read the research paper on Cyberthreats on Implantable Medical Devices">
+         Data Breach Investigations Report, Verizon
         </a>
       </li>
       <li>
