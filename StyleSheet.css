@@ -854,3 +854,52 @@ body[dyslexia-mode="on"] {
       transform: translateX(-50%);  /* Move fully to the left */
     }
   }
+
+  .quiz-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: black;
+    border: 3px solid #14d427; /* Neon green border */
+    box-shadow: 0 0 10px #14d427, 0 0 20px #14d427;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    color: #FFD700;
+}
+
+.option {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #14d427;
+    border: 2px solid #FFD700;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.option:hover {
+    background-color: #FFD700;
+    color: black;
+}
+
+#nextButton {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #FFD700;
+    border: none;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#nextButton:hover {
+    background: #14d427;
+    color: black;
+}

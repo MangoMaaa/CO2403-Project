@@ -74,23 +74,34 @@
 
 <br><br>
 
+<h2> How to identify an Insider?</h2>
+<p>There are plenty of tools and measures in place that can help companies identify potential insiders: <br>
+- A robust implementation of authentication controls and Insider Risk Management Tools such as Teramind which monitors employee activity and efficiency and offers functions that block, alert and redirect suspicious behaviour with real time access to user activities. <sup>2</sup><br><br>
+- Downloading or accessing unnatural amounts of data not related to their job. <br> <br>
+- Asking for access to tools or resources not needed for their job.<br> <br>
+- Using unauthorized external storage devices like USBs, truning off encryption, attempting to bypass access controls.<br><br>
+- Network crawling accompanied by sensitive data searches <br><br>
+- Hoarding data and copying files from sensitive folders. <br><br>
+- Logging in outside of usual hours. <br><br>
+</p>
+
 <h2> Case Studies </h2>
 
 <!-- Case Study Slideshow -->
 <div class="casestudy-container">
   <div class="mySlides">
-    <p class="author">Agent Tesla 2020</p>
-    <p>Agent Tesla, a keylogger and remote access malware, exploited the COVID-19 pandemic...</p>
+    <p class="author">Tesla 2018 Data Exfiltration</p>
+    <p>High profile case reported that a disgruntled employee claining didnt get the promotion he deserved, stole and leaked company data.He made critical changes to Teslas operating system, altering long lines of code with no authorisation. Discover by interal security team who attributed unusual activity to the insider. </p>
   </div>
 
   <div class="mySlides">
-    <p class="author">Emotet Attack (2018)</p>
-    <p>Emotet, initially a banking Trojan, evolved into a malware distribution service...</p>
+    <p class="author"> Google vs. Anthony Levandowski (2017 </p>
+    <p>Former Google engineer, sued for allegedly stealing 14,000 confidential files that related to Googles emerging self driving car technology. Google’s internal audit revealed that Levandowski had downloaded thousands of sensitive documents onto a personal hard drive before resigning </p>
   </div>
 
   <div class="mySlides">
-    <p class="author">NjRAT (2018-2019)</p>
-    <p>NjRAT was used in cyber-espionage targeting governments and businesses...</p>
+    <p class="author"> Edward Snowden – National Security Agency (NSA) (2013)</p>
+    <p> Former CIA contractor copied 1.7 million files and released thousands of classified documents to journalists that outlined many US government secrets and controversial governemnts surveillance activities. By the time Data Loss Prevention Strategy (DLP) had caught on, Snowden had already left the country. </p>
   </div>
 
   <!-- Next/Prev Buttons -->
@@ -104,6 +115,18 @@
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
+
+<div class="video-container">
+  <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/QXnNkSeT6dM?si=9fN2EtBjq-5XXMXL" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
+</div>
+
 
 <!-- JavaScript to fix First Slideshow -->
 <script>
@@ -160,6 +183,99 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 </script>
+
+
+<script>
+  const quizData = [
+      {
+          question: "What is an insider threat in cybersecurity?",
+          options: [
+              "An external hacker trying to access the network",
+              "A threat originating from a trusted individual within the organization",
+              "A virus disguised as legitimate software",
+              "An advanced encryption technique used by hackers"
+          ],
+          answer: 1
+      },
+      {
+          question: "Which of the following can be a potential source of an insider threat?",
+          options: [
+              "Employees with malicious intent",
+              "Disgruntled ex-employees",
+              "Contractors with system access",
+              "All of the above"
+          ],
+          answer: 3
+      },
+      {
+          question: "What is a common method used by insider threats to steal sensitive data?",
+          options: [
+              "Phishing emails",
+              "Data exfiltration using USB drives or cloud storage",
+              "Brute force attacks on servers",
+              "DDoS attacks"
+          ],
+          answer: 1
+      }
+  ];
+  
+  let currentQuestion = 0;
+  let score = 0;
+  
+  function loadQuestion() {
+      const questionElement = document.getElementById("question");
+      const optionsElement = document.getElementById("options");
+      const nextButton = document.getElementById("nextButton");
+      const resultElement = document.getElementById("result");
+  
+      // Clear previous options and result
+      optionsElement.innerHTML = "";
+      resultElement.textContent = "";
+  
+      if (currentQuestion < quizData.length) {
+          let quiz = quizData[currentQuestion];
+          questionElement.textContent = quiz.question;
+  
+          quiz.options.forEach((option, index) => {
+              let button = document.createElement("button");
+              button.textContent = option;
+              button.className = "option";
+              button.onclick = () => checkAnswer(index);
+              optionsElement.appendChild(button);
+          });
+  
+          nextButton.style.display = "none"; // Hide the Next button until the answer is checked
+      } else {
+          document.querySelector(".quiz-container").innerHTML = `<h2>Quiz Complete!</h2><p>Your score: ${score}/${quizData.length}</p>`;
+      }
+  }
+  
+  function checkAnswer(selectedIndex) {
+      const correctAnswerIndex = quizData[currentQuestion].answer;
+      if (selectedIndex === correctAnswerIndex) {
+          score++;
+          document.getElementById("result").textContent = "Correct!";
+      } else {
+          document.getElementById("result").textContent = "Wrong!";
+      }
+      
+      // Disable options after selection
+      const options = document.querySelectorAll(".option");
+      options.forEach(button => button.disabled = true);
+      
+      // Show the Next button
+      document.getElementById("nextButton").style.display = "inline-block";
+  }
+  
+  function nextQuestion() {
+      currentQuestion++;
+      loadQuestion();
+  }
+  
+  // Load first question
+  document.addEventListener("DOMContentLoaded", loadQuestion);
+  </script>
+  
 
 <br><br>
 <footer class="arcade-footer">
