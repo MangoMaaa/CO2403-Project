@@ -95,7 +95,7 @@
   </div>
 
   <div class="mySlides">
-    <p class="author"> Google vs. Anthony Levandowski (2017 </p>
+    <p class="author"> Google vs. Anthony Levandowski (2017) </p>
     <p>Former Google engineer, sued for allegedly stealing 14,000 confidential files that related to Googles emerging self driving car technology. Google’s internal audit revealed that Levandowski had downloaded thousands of sensitive documents onto a personal hard drive before resigning </p>
   </div>
 
@@ -174,36 +174,104 @@ function showSlides(n) {
 }
 </script>
 
+
+<br> <br> <br>
+<div class="quiz-container">
+  <h2 id="question">Loading...</h2>
+  <div id="options"></div>
+  <button id="nextButton" onclick="nextQuestion()" style="display:none;">Next</button>
+  <p id="result"></p>
+</div>
+
 <script>
-  const quizData = [
-      { question: "What is an insider threat?", options: ["External hacker", "Trusted individual misusing access", "Virus", "Encryption technique"], answer: 1 },
-      { question: "Which of these is an insider threat?", options: ["Employees", "Ex-employees", "Contractors", "All of the above"], answer: 3 },
-      { question: "Common insider attack method?", options: ["Phishing emails", "USB data theft", "Brute force attacks", "DDoS"], answer: 1 }
-  ];
-  
-  let currentQuestion = 0, score = 0;
-  function loadQuestion() {
-      document.getElementById("question").textContent = quizData[currentQuestion].question;
-      document.getElementById("options").innerHTML = quizData[currentQuestion].options.map((option, index) => 
-          `<button class="option" onclick="checkAnswer(${index})">${option}</button>`).join('');
-      document.getElementById("nextButton").style.display = "none";
-  }
-  
-  function checkAnswer(selectedIndex) {
-      if (selectedIndex === quizData[currentQuestion].answer) score++;
-      document.getElementById("result").textContent = selectedIndex === quizData[currentQuestion].answer ? "Correct!" : "Wrong!";
-      document.querySelectorAll(".option").forEach(button => button.disabled = true);
-      document.getElementById("nextButton").style.display = "inline-block";
-  }
-  
-  function nextQuestion() { currentQuestion++; loadQuestion(); }
-  document.addEventListener("DOMContentLoaded", loadQuestion);
-  
-  var slideIndex = 1;
-  function plusSlides(n) { showSlides(slideIndex += n); }
-  function currentSlide(n) { showSlides(slideIndex = n); }
-  function showSlides(n) { document.querySelectorAll(".mySlides").forEach((slide, i) => slide.style.display = (i === n - 1) ? "block" : "none"); }
-  </script>
+    const quizData = [
+        {
+            question: "What is an insider threat in cybersecurity?",
+            options: [
+                "An external hacker trying to access the network",
+                "A threat originating from a trusted individual within the organization",
+                "A virus disguised as legitimate software",
+                "An advanced encryption technique used by hackers"
+            ],
+            answer: 1
+        },
+        {
+            question: "Which of the following can be a potential source of an insider threat?",
+            options: [
+                "Employees with malicious intent",
+                "Disgruntled ex-employees",
+                "Contractors with system access",
+                "All of the above"
+            ],
+            answer: 3
+        },
+        {
+            question: "What is a common method used by insider threats to steal sensitive data?",
+            options: [
+                "Phishing emails",
+                "Data exfiltration using USB drives or cloud storage",
+                "Brute force attacks on servers",
+                "DDoS attacks"
+            ],
+            answer: 1
+        }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    function loadQuestion() {
+        const questionElement = document.getElementById("question");
+        const optionsElement = document.getElementById("options");
+        const nextButton = document.getElementById("nextButton");
+        const resultElement = document.getElementById("result");
+
+        // Clear previous options and result
+        optionsElement.innerHTML = "";
+        resultElement.textContent = "";
+
+        if (currentQuestion < quizData.length) {
+            let quiz = quizData[currentQuestion];
+            questionElement.textContent = quiz.question;
+
+            quiz.options.forEach((option, index) => {
+                let button = document.createElement("button");
+                button.textContent = option;
+                button.className = "option";
+                button.onclick = () => checkAnswer(index);
+                optionsElement.appendChild(button);
+            });
+
+            nextButton.style.display = "none"; // Hide the Next button until the answer is checked
+        } else {
+            document.querySelector(".quiz-container").innerHTML = `<h2>Quiz Complete!</h2><p>Your score: ${score}/${quizData.length}</p>`;
+        }
+    }
+
+    function checkAnswer(selectedIndex) {
+        const correctAnswerIndex = quizData[currentQuestion].answer;
+        if (selectedIndex === correctAnswerIndex) {
+            score++;
+            document.getElementById("result").textContent = "Correct!";
+        } else {
+            document.getElementById("result").textContent = "Wrong!";
+        }
+
+        // Disable options after selection
+        const options = document.querySelectorAll(".option");
+        options.forEach(button => button.disabled = true);
+
+        // Show the Next button
+        document.getElementById("nextButton").style.display = "inline-block";
+    }
+
+    function nextQuestion() {
+        currentQuestion++;
+        loadQuestion();
+    }
+
+    loadQuestion();
+</script>
   
 
 <br><br>
